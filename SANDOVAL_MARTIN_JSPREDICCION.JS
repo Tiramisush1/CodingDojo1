@@ -16,3 +16,4 @@ function add(num1, num2){
 }
 
 // respuesta: el console.log indica: que la suma de los numeros 10+20 es 30 //
+
