@@ -124,3 +124,4 @@ console.log('result is', result);
 Variable                 Datos
 Sum                     5, 3, 6, 3, 5, 6
 Result                   19
+*/
