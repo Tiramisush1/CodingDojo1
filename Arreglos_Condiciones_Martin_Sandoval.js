@@ -19,6 +19,7 @@ function muestraListaDeCompras() {
 variables         datos
 produce      =    ["manzanas", "naranjas"]
 frozen       =    ["brocoli", "helado"]
+                      ["brocoli", "helado", "croqueta de papa"]
 */
 
 var movieLibrary = ["Bambi", "E.T.", "Toy Story"];
@@ -29,4 +30,6 @@ console.log(movieLibrary);
 /*
 variable           datos
 movieLibrary      ["Bambi", "E.T.", "Toy Story"]
+                  ["Bambi", "E.T.", "Toy Story", "Zoro"]
+                  ["Bambi", "Beetlejuice", "Toy Story", "Zoro"]
 */
