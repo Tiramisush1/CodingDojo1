@@ -1,5 +1,4 @@
-var alturaNiño = 45;
-function muestraSiElNiñoPuedeSubirALaMontañaRusa () {
+function muestraSiElNiñoPuedeSubirALaMontañaRusa (alturaNiño) {
     if (alturaNiño >= 52) {
         console.log ("¡Súbete, chico!")
     }
@@ -9,3 +8,4 @@ function muestraSiElNiñoPuedeSubirALaMontañaRusa () {
         }
     }
 }
+muestraSiElNiñoPuedeSubirALaMontañaRusa (50);
