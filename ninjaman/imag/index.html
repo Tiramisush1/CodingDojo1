@@ -106,7 +106,15 @@
     }
 
     function drawWorld(){
-        output
+        output = "";
+
+        for(var row =0; row < world.lenght; row++){
+            output += "<div class = 'row'></div>"
+            for(var x = 0; x < world(row).lenght; x++){
+                console.log("value: ", world(row)(x))
+            }
+            
+        }
         document.getElementById('world').innerHTML=
     }
     </script>
