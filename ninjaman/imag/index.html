@@ -41,7 +41,6 @@
                 top: 40px;
             }
 
-
         </style>
     </head>
     
@@ -91,7 +90,7 @@
     
     </body>
     <script type="text/javascript">
-        var world = world [
+        var world = [
 
         [1,1,1,1,1],
         [1,0,2,2,1],
@@ -100,22 +99,25 @@
         [1,1,1,1,1],
     ];
     var worldDict = {
-        0: 'blank'
-        1: 'wall'
+        0: 'blank',
+        1: 'wall',
         2: 'sushi'
     }
 
     function drawWorld(){
         output = "";
 
-        for(var row =0; row < world.lenght; row++){
+        for(var row = 0; row < world.lenght; row++){
             output += "<div class = 'row'></div>"
             for(var x = 0; x < world(row).lenght; x++){
-                console.log("value: ", world(row)(x))
+                output += "<div class = 'sushi'></div>"[
+                    world[row][x]] +"'></div>"
+                    //worldDic[world][row][x]])
             }
             
         }
         document.getElementById('world').innerHTML=
+            output 
     }
     </script>
 </html>
