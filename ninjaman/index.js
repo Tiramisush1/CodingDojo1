@@ -38,37 +38,35 @@ drawWorld(); {
     }
 
     function drawNinjaman() {
-        document.getElementById('ninjaman').style.top =
-            ninjaman.x * 40 + 'px'
-        document.getElementById('ninjaman').style.left =
+        document.getElementById('NinjaMan').style.top =
+            ninjaman.y * 40 + 'px'
+        document.getElementById('NinjaMan').style.left =
             ninjaman.x * 40 + 'px'
     }
 }
 
-drawNinjaman()
-
-    document.onkeydown = function (e) {
-    switch (e.keyCode) {
-        case 37:
-            if (map[ninjaman.top][ninjaman.left - 1] !== 0) {
-                ninjaman.left--;
-            }
-            break;
-        case 39:
-            if (map[ninjaman.top][ninjaman.left + 1] !== 0) {
-                ninjaman.left++;
-            }
-            break;
-        case 38:
-            if (map[ninjaman.top - 1][ninjaman.left] !== 0) {
-                ninjaman.top--;
-            }
-            break;
-        case 40:
-            if (map[ninjaman.top + 1][ninjaman.left] !== 0) {
-                ninjaman.top++;
-            }
-            break;
+drawNinjaman();
+switch (e.keyCode){
+    case 37:
+    if(map[ninjaman.top] [ninjaman.left - 1] != 0){
+        ninjaman.left--;
     }
+    break;
+case 39:
+    if (map[ninjaman.top] [ninjaman.left + 1] !== 0){
+        ninjaman.left++;
+    }
+    break;
+case 38:
+        if (map[ninjaman.top - 1] [ninjaman.left] !== 0){
+            ninjaman.top++;
+        }
+    break;
+case 40:
+    if (map[ninjaman.top + 1] [ninjaman.left] !== 0){
+        ninjaman.top++;
+    }
+}
+    world[ninjaman.y] [ninjaman.x] = 0;
     drawNinjaman();
-};
+    drawWorld();
