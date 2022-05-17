@@ -1,6 +1,7 @@
 function random(max, min) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+var NinjaMan = 450, NinjaMan = 100, direction = 'down', step = 1;
 
 var world = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -40,75 +41,49 @@ function drawWorld() {
 }
 drawWorld();
 
-var ninjaman = {
+var NinjaMan = {
     x: 1,
     y: 1,
 
 }
-
-function drawNinjaman() {
-    document.getElementById('NinjaMan').style.top = ninjaman.y * 40 + 'px'
-    document.getElementById('NinjaMan').style.left = ninjaman.x * 40 + 'px'
+function drawNinjaMan() {
+    document.getElementById("NinjaMan").style.top = NinjaMan.y * 40 + "px";
+    document.getElementById("NinjaMan").style.left = NinjaMan.x * 40 + "px";
 }
-drawNinjaman();
+drawNinjaMan()
 
-var ghost = {
-    x: 8,
-    y: 6,
-}
-
-function drawghost() {
-    document.getElementById('ghost').style.top = ghost.y * 40 + 'px'
-    document.getElementById('ghost').style.left = ghost.x * 40 + 'px'
-}
-drawghost();
-
-function moveghost() {
-    var move = random(-1, 4);
-    if (move === 0 && (world[ghost.y][ghost.x - 1] !== 1)) { //0 = left
-        ghost.x--;
-    } else if (move === 1 && (world[ghost.y][ghost.x + 1] !== 1)) { //1 = right
-        ghost.x++;
-    } else if (move === 2 && (world[ghost.y - 1][ghost.x] !== 1)) { //2 = up
-        ghost.y--;
-    } else if (move === 3 && (world[ghost.y + 1][ghost.x] !== 1)) { //3 = down
-        ghost.y++;
-    }
-}
-
-document.onkeydown = function (e) {
-    if (e.keyCode === 37) { //derecha
-        if (world[ninjaman.y][ninjaman.x - 1] !== 1) {
-            ninjaman.x--;
+    document.onkeydown = function (e) {
+        if (e.keyCode == 37) {
+            if (world[NinjaMan.y][NinjaMan.x - 1] != 1) {
+                NinjaMan.x--;
+            }
         }
-    }
-    if (e.keyCode === 38) { //arriba
-        if (world[ninjaman.y - 1][ninjaman.x] !== 1) {
-            ninjaman.y--;
+        if (e.keyCode == 39) {
+            if (world[NinjaMan.y][NinjaMan.x + 1] != 1) {
+                NinjaMan.x++;
+            }
         }
-    }
-    if (e.keyCode === 39) { //izquierda
-        if (world[ninjaman.y][ninjaman.x + 1] !== 1) {
-            ninjaman.x++;
+        if (e.keyCode == 38) {
+            if (world[NinjaMan.y - 1][NinjaMan.x] != 1) {
+                NinjaMan.y--;
+            }
         }
-    }
-    if (e.keyCode === 40) { //abajo
-        if (world[ninjaman.y + 1][ninjaman.x] !== 1) {
-            ninjaman.y++;
+        if (e.keyCode == 40) {
+            if (world[NinjaMan.y + 1][NinjaMan.x] != 1) {
+                NinjaMan.y++;
+            }
         }
+        world[NinjaMan.y][NinjaMan.x] = 0;
+        drawNinjaMan()
+        drawWorld()
     }
+        *
+        function gameLoop() {
+            drawNinjaMan();
 
-    drawNinjaman()
-    drawWorld()
-}
-*
-function gameLoop() {
-    drawNinjaman();
-    drawghost();
-    moveghost();
-    drawghost();
-
+        }
     setTimeout(gameLoop, 750)
-}
+
 gameLoop();
-a
+drawNinjaMan();
+drawWorld();
