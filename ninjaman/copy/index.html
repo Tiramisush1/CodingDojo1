@@ -127,6 +127,23 @@ html>
             }
         }
 }*/
+
+if (world[ninjaman.y][ninjaman.x] === 2) {
+        world[ninjaman.y][ninjaman.x] = 0;
+        score += 10;
+        console.log("score= " + score);
+    } else if (world[ninjaman.y][ninjaman.x] === 3) {
+        world[ninjaman.y][ninjaman.x] = 0;
+        score += 5;
+        console.log("score= " + score);
+    }
+    if ((ninjaman.x === ghost.x) && (ninjaman.y === ghost.y)) {
+        lives -= 1;
+        console.log("lives= " + lives)
+    }
+    if (lives === 0) {
+        document.write("Game Over!</br>Your Score= " + score)
+    }
 </script>
 
 </html>
