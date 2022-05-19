@@ -46,44 +46,41 @@ var NinjaMan = {
     y: 1,
 
 }
-function drawNinjaMan() {
-    document.getElementById("NinjaMan").style.top = NinjaMan.y * 40 + "px";
-    document.getElementById("NinjaMan").style.left = NinjaMan.x * 40 + "px";
+function drawNinjaman() {
+    document.getElementById('NinjaMan').style.top = NinjaMan.y * 40 + 'px';
+    document.getElementById('NinjaMan').style.left = NinjaMan.x * 40 + 'px';
 }
-drawNinjaMan()
 
-    document.onkeydown = function (e) {
-        if (e.keyCode == 37) {
-            if (world[NinjaMan.y][NinjaMan.x - 1] != 1) {
-                NinjaMan.x--;
-            }
-        }
-        if (e.keyCode == 39) {
-            if (world[NinjaMan.y][NinjaMan.x + 1] != 1) {
-                NinjaMan.x++;
-            }
-        }
-        if (e.keyCode == 38) {
-            if (world[NinjaMan.y - 1][NinjaMan.x] != 1) {
-                NinjaMan.y--;
-            }
-        }
-        if (e.keyCode == 40) {
-            if (world[NinjaMan.y + 1][NinjaMan.x] != 1) {
-                NinjaMan.y++;
-            }
-        }
-        world[NinjaMan.y][NinjaMan.x] = 0;
-        drawNinjaMan()
-        drawWorld()
+document.onkeydown = function (e) {
+
+    console.log(e);
+    console.log("pasa");
+    console.log(e.keyCode);
+
+    if (e.keyCode == 37) {
+        NinjaMan.x = NinjaMan.x - 1 ;
+ 
+        console.log(37);
     }
-        *
-        function gameLoop() {
-            drawNinjaMan();
+    if (e.keyCode == 39) {
 
-        }
-    setTimeout(gameLoop, 750)
+        console.log(39);
+        
+        NinjaMan.x = NinjaMan.x + 1 ;
+    }
+    if (e.keyCode == 40) {
+        console.log(40);
 
-gameLoop();
-drawNinjaMan();
-drawWorld();
+        
+        NinjaMan.y = NinjaMan.y + 1 ;
+    }
+    if (e.keyCode == 38) {
+        console.log(38);
+
+        NinjaMan.y = NinjaMan.y - 1 ;
+    }
+    console.log(NinjaMan.y);
+    console.log(NinjaMan.x);
+
+    drawNinjaman();
+}
