@@ -39,7 +39,7 @@
     display: inline-block;
 }
 
-#ninjaman {
+#NinjaMan {
     background-color: black;
     height: 40px;
     width: 40px;
@@ -50,7 +50,7 @@
     left: 40px;
     top: 40px;
 }
-#ghost{
+#Bluey{
     background-color: black;
     height: 40px;
     width: 40px;
@@ -58,6 +58,32 @@
     background-image: url('imag/bluey.gif');
     background-size: contain;
     position: absolute;
-    left: 40px;
-    top: 40px;
+}
+#Pumpky {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-image: url('imag/pumpky.gif');
+    background-size: contain;
+    position: absolute;
+
+}
+#Pinky {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-image: url('imag/pinky.gif');
+    background-size: contain;
+    position: absolute;
+}
+#Red {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-image: url('imag/red.gif');
+    background-size: contain;
+    position: absolute;
 }
