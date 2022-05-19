@@ -1,3 +1,4 @@
+var world = document.querySelector("#world")
 function random(max, min) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -54,12 +55,12 @@ function drawNinjaman() {
 document.onkeydown = function (e) {
 
     console.log(e);
-    console.log("pasa");
+    console.log("steps");
     console.log(e.keyCode);
 
     if (e.keyCode == 37) {
         NinjaMan.x = NinjaMan.x - 1 ;
- 
+
         console.log(37);
     }
     if (e.keyCode == 39) {
@@ -84,3 +85,4 @@ document.onkeydown = function (e) {
 
     drawNinjaman();
 }
+
