@@ -18,12 +18,16 @@
     background-image:url("imag/player.png");
     width: 131px;
     height: 102px;
+    background-size: contain;
+    display: inline-block;
 }
-.enemies {
+.enemy {
     position: absolute;
     background-image: url("imag/enemy.png");
     width: 90px;
     height: 77px;
+    background-size: contain;
+    display: inline-block;
 }
 .missil {
     ´position: absolute;
