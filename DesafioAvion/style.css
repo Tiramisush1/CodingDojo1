@@ -16,21 +16,21 @@
 .player {
     position: absolute;
     background-image:url("imag/player.png");
-    width: 131px;
-    height: 102px;
+    width: 70px;
+    height: 75px;
     background-size: contain;
     display: inline-block;
 }
 .enemy {
     position: absolute;
     background-image: url("imag/enemy.png");
-    width: 90px;
-    height: 77px;
+    width: 70px;
+    height: 75px;
     background-size: contain;
     display: inline-block;
 }
 .missil {
-    ´position: absolute;
+    position: absolute;
     background-color: red;
     width: 2px;
     height: 10px;
