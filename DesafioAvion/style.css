@@ -1,13 +1,3 @@
-* 
-{
-    margin: 0;
-    padding: 0;
-}
-
-.row {
-    line-height: 0;
-}
-
 #ocean {
     background-image: url("imag/ocean.jpg");
     width: 900px;
@@ -28,10 +18,4 @@
     height: 75px;
     background-size: contain;
     display: inline-block;
-}
-.missil {
-    position: absolute;
-    background-color: red;
-    width: 2px;
-    height: 10px;
 }
