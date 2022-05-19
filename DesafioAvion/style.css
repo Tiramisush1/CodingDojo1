@@ -10,6 +10,7 @@
 .enemigo {
     position: absolute;
     background-image: url("imag/enemy.png");
+    width: 90px;
 }
 .misil {
     ´position: absolute;
