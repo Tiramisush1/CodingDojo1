@@ -19,3 +19,9 @@
     background-size: contain;
     display: inline-block;
 }
+.missiles {
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 10px;
+}
