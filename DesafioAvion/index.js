@@ -7,6 +7,7 @@ var enemies = [
     {left: 700, top: 10},
     {left: 300, top: 30},
     {left: 120, top: 100},
+    {left: 100, top: 290}
 ]
 
 var missiles = []
@@ -16,34 +17,35 @@ var missiles = []
         document.getElementById("player").innerHTML = content;
 }
 
-function drawEnemies(){
+function drawEnemies() {
     content = "";
-    for(var idx=0; idx<enemies.length; idx++){
-        content += "<div class='enemy' style='left:"+enemies[idx].left+"px; top:"+enemies[idx].top+"px'></div>";
+    for(var i=0; i<enemies.length; i++) {
+        content += "<div class='enemy' style='left: "+enemies[i].left+"px; top: "+enemies[i].top+"px'></div>";
     }
     document.getElementById("enemies").innerHTML = content;
 }
-
-function drawMissiles(){
+function drawMissiles() {
     content = "";
-    for(var idx=0; idx<missiles.length; idx++){
-        content += "<div class='missiles' style='left:"+missiles[idx].left+"px; top:"+missiles[idx].top+"px'></div>"
+    for(var i=0; i<missiles.length; i++) {
+        content += "<div class='missiles' style='left: "+missiles[i].left+"px; top: "+missiles[i].top+"px'></div>";
     }
     document.getElementById("missiles").innerHTML = content;
 }
 
-function moveEnemies(){
-    for(var idx=0; idx < enemies.length; idx++){
-        enemies[idx].top = enemies[idx++].top + 1;
+function moveEnemies() {
+    for(var i=0; i<enemies.length; i++) {
+        enemies[i].top += 1;
     }
 }
 
-function moveMissiles(){
-    for(var idx=0; idx<missiles.length; idx++){
-        missiles[idx].top = missiles[idx].top - 2;
+function moveMissiles() {
+    for(var i=0; i<missiles.length; i++) {
+        missiles[i].top -= 1;
     }
 }
 
+
+///mov
 document.onkeydown = function(e) {
     console.log(e);
     if(e.keyCode == 37 && player.left > 10){ // left
@@ -58,7 +60,7 @@ document.onkeydown = function(e) {
     if(e.keyCode == 40 && player.top < 625){ // DOWN
         player.top = player.top + 10;
     }
-    if(e.keyCode == 32){
+    if(e.keyCode == 32){ //disparo
         missiles.push({left: player.left + 34, top: player.top - 8})
         drawMissiles();
     }
