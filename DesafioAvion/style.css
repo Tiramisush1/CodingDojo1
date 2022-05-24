@@ -1,7 +1,7 @@
 #ocean {
     background-image: url("imag/ocean.jpg");
-    
-    background-size: size;  
+    width: 900px;
+    height: 900px;
 }
 .player {
     position: absolute;
@@ -30,8 +30,8 @@
 */
 .missiles {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     background-image: url(imag/Fire.png);
     background-size: contain;
 
