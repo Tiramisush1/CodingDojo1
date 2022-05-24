@@ -1,7 +1,7 @@
 #ocean {
     background-image: url("imag/ocean.jpg");
-    
-    background-size: size;  
+    width: 900px;
+    height: 700px;
 }
 .player {
     position: absolute;
@@ -36,4 +36,10 @@
     background-size: contain;
 
 }
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
 
